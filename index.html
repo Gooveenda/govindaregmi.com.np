@@ -1,1 +1,1422 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GovindaRegmi.com.np | Jobs, Finance & Opportunities in Nepal</title>
+
+    <meta name="description"
+          content="Find jobs, foreign employment opportunities, financial information, IPO updates, share market news, banking information and useful tools for Nepal.">
+
+    <meta name="keywords"
+          content="Nepal jobs, jobs in Nepal, foreign jobs, government jobs, NEPSE, IPO, Nepal finance, share market, banking, employment">
+
+    <meta name="author" content="GovindaRegmi.com.np">
+
+    <meta name="theme-color" content="#0f3d5e">
+
+    <style>
+        /* ================================
+           GLOBAL
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ================================
+           HEADER
+        ================================= */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-main {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 800;
+            color: #0f3d5e;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #d97706;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        nav a {
+            font-size: 15px;
+            font-weight: 600;
+            color: #374151;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #0f3d5e;
+        }
+
+        .mobile-menu {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 27px;
+            cursor: pointer;
+            color: #0f3d5e;
+        }
+
+        /* ================================
+           HERO
+        ================================= */
+
+        .hero {
+            background: linear-gradient(135deg, #0f3d5e, #155e75);
+            color: white;
+            padding: 70px 0 75px;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: #fbbf24;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #e0f2fe;
+            max-width: 720px;
+            margin: 0 auto 30px;
+        }
+
+        /* SEARCH */
+
+        .search-box {
+            max-width: 760px;
+            margin: auto;
+            background: white;
+            padding: 7px;
+            border-radius: 10px;
+            display: flex;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 15px;
+            font-size: 16px;
+            color: #111827;
+        }
+
+        .search-box button {
+            border: none;
+            background: #d97706;
+            color: white;
+            padding: 0 25px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .search-box button:hover {
+            background: #b45309;
+        }
+
+        /* ================================
+           QUICK LINKS
+        ================================= */
+
+        .quick-links {
+            background: white;
+            margin-top: -25px;
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .quick-item {
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            font-weight: 700;
+            color: #0f3d5e;
+            transition: 0.2s;
+        }
+
+        .quick-item:hover {
+            transform: translateY(-3px);
+            border-color: #0f3d5e;
+        }
+
+        .quick-icon {
+            display: block;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        /* ================================
+           GENERAL SECTION
+        ================================= */
+
+        section {
+            padding: 65px 0;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+        }
+
+        .section-header h2 {
+            color: #0f3d5e;
+            font-size: 30px;
+            margin-bottom: 6px;
+        }
+
+        .section-header p {
+            color: #64748b;
+        }
+
+        /* ================================
+           CARDS
+        ================================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 25px;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background: #e0f2fe;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            color: #0f3d5e;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .card-link {
+            color: #d97706;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* ================================
+           TWO COLUMN AREA
+        ================================= */
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 25px;
+        }
+
+        .panel {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .panel-header {
+            padding: 20px 22px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .panel-header h3 {
+            color: #0f3d5e;
+        }
+
+        .view-all {
+            font-size: 13px;
+            color: #d97706;
+            font-weight: 700;
+        }
+
+        .job-item {
+            padding: 20px 22px;
+            border-bottom: 1px solid #edf0f2;
+        }
+
+        .job-item:last-child {
+            border-bottom: none;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 5px;
+        }
+
+        .job-meta {
+            font-size: 13px;
+            color: #64748b;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .job-tag {
+            display: inline-block;
+            margin-top: 9px;
+            background: #ecfdf5;
+            color: #047857;
+            padding: 3px 9px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* ================================
+           FINANCE
+        ================================= */
+
+        .finance-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .finance-card {
+            background: white;
+            padding: 22px;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .finance-card h3 {
+            color: #0f3d5e;
+            margin-bottom: 10px;
+        }
+
+        .finance-value {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .finance-note {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        /* ================================
+           TOOLS
+        ================================= */
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .tool {
+            background: white;
+            border: 1px solid #e5e7eb;
+            padding: 18px;
+            border-radius: 9px;
+            font-weight: 700;
+            color: #334155;
+            transition: 0.2s;
+        }
+
+        .tool:hover {
+            border-color: #0f3d5e;
+            color: #0f3d5e;
+        }
+
+        /* ================================
+           CTA
+        ================================= */
+
+        .cta {
+            background: #0f3d5e;
+            color: white;
+            border-radius: 12px;
+            padding: 45px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            color: #dbeafe;
+            margin-bottom: 22px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #d97706;
+            padding: 12px 24px;
+            border-radius: 7px;
+            font-weight: 700;
+        }
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        footer {
+            background: #111827;
+            color: #cbd5e1;
+            margin-top: 60px;
+            padding: 50px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 35px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            max-width: 380px;
+            color: #94a3b8;
+        }
+
+        footer h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 9px;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #374151;
+            margin-top: 35px;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        /* ================================
+           SEARCH RESULT MESSAGE
+        ================================= */
+
+        #searchMessage {
+            display: none;
+            margin-top: 18px;
+            background: white;
+            color: #1f2937;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        /* ================================
+           RESPONSIVE
+        ================================= */
+
+        @media (max-width: 900px) {
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .quick-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .finance-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 94%;
+            }
+
+            .hero {
+                padding: 50px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .search-box {
+                flex-direction: column;
+                gap: 7px;
+                background: transparent;
+                box-shadow: none;
+            }
+
+            .search-box input {
+                border-radius: 7px;
+            }
+
+            .search-box button {
+                min-height: 48px;
+            }
+
+            .quick-grid,
+            .cards,
+            .finance-grid,
+            .tools-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-links {
+                margin-top: -20px;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            .section-header h2 {
+                font-size: 26px;
+            }
+
+            .cta {
+                padding: 35px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================================
+     HEADER
+================================= -->
+
+<header>
+
+    <div class="container header-main">
+
+        <a href="#" class="logo">
+            Govinda<span>Regmi</span>.com.np
+        </a>
+
+        <button class="mobile-menu" id="mobileMenu">
+            ☰
+        </button>
+
+        <nav id="mainNav">
+
+            <a href="#jobs">Jobs</a>
+
+            <a href="#finance">Finance</a>
+
+            <a href="#tools">Tools</a>
+
+            <a href="#news">News</a>
+
+            <a href="#about">About</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================================
+     HERO
+================================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <h1>
+                Jobs, Finance &amp;
+                <span>Opportunities in Nepal</span>
+            </h1>
+
+            <p>
+                A growing platform for finding jobs, exploring financial
+                information, discovering opportunities and accessing useful
+                tools for Nepal.
+            </p>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search jobs, finance, IPO, companies..."
+                    aria-label="Search"
+                >
+
+                <button id="searchButton">
+                    Search
+                </button>
+
+            </div>
+
+            <div id="searchMessage"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     QUICK LINKS
+================================= -->
+
+<div class="container">
+
+    <div class="quick-links">
+
+        <div class="quick-grid">
+
+            <a href="#jobs" class="quick-item">
+                <span class="quick-icon">💼</span>
+                Find Jobs
+            </a>
+
+            <a href="#finance" class="quick-item">
+                <span class="quick-icon">📈</span>
+                Finance
+            </a>
+
+            <a href="#tools" class="quick-item">
+                <span class="quick-icon">🧮</span>
+                Calculators
+            </a>
+
+            <a href="#news" class="quick-item">
+                <span class="quick-icon">📰</span>
+                Latest Updates
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================================
+     JOBS
+================================= -->
+
+<section id="jobs">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Jobs &amp; Employment</h2>
+
+            <p>
+                Explore employment opportunities and job information.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">💼</div>
+
+                <h3>Nepal Jobs</h3>
+
+                <p>
+                    Discover job opportunities from companies and
+                    organizations across Nepal.
+                </p>
+
+                <a href="#" class="card-link">
+                    Explore Jobs →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🌍</div>
+
+                <h3>Foreign Jobs</h3>
+
+                <p>
+                    Explore foreign employment opportunities and
+                    useful information for Nepali workers.
+                </p>
+
+                <a href="#" class="card-link">
+                    View Foreign Jobs →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🏛️</div>
+
+                <h3>Government Jobs</h3>
+
+                <p>
+                    Find information about government employment
+                    opportunities and announcements.
+                </p>
+
+                <a href="#" class="card-link">
+                    View Government Jobs →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     LATEST JOBS + NEWS
+================================= -->
+
+<section id="news">
+
+    <div class="container">
+
+        <div class="two-column">
+
+
+            <!-- JOB LIST -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <h3>Latest Job Opportunities</h3>
+
+                    <a href="#" class="view-all">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="job-item">
+
+                    <div class="job-title">
+                        Example: Electrical Technician
+                    </div>
+
+                    <div class="job-meta">
+
+                        <span>📍 Saudi Arabia</span>
+
+                        <span>💰 Salary: Information coming soon</span>
+
+                    </div>
+
+                    <span class="job-tag">
+                        Foreign Employment
+                    </span>
+
+                </div>
+
+
+                <div class="job-item">
+
+                    <div class="job-title">
+                        Example: Accountant
+                    </div>
+
+                    <div class="job-meta">
+
+                        <span>📍 Kathmandu, Nepal</span>
+
+                        <span>🏢 Private Company</span>
+
+                    </div>
+
+                    <span class="job-tag">
+                        Nepal Job
+                    </span>
+
+                </div>
+
+
+                <div class="job-item">
+
+                    <div class="job-title">
+                        Example: Administrative Assistant
+                    </div>
+
+                    <div class="job-meta">
+
+                        <span>📍 Nepal</span>
+
+                        <span>🏛️ Organization</span>
+
+                    </div>
+
+                    <span class="job-tag">
+                        Opportunity
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- LATEST UPDATES -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <h3>Latest Updates</h3>
+
+                    <a href="#" class="view-all">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="job-item">
+
+                    <div class="job-title">
+                        Nepal Finance &amp; Economy
+                    </div>
+
+                    <div class="job-meta">
+                        Financial information and analysis.
+                    </div>
+
+                </div>
+
+
+                <div class="job-item">
+
+                    <div class="job-title">
+                        Share Market &amp; IPO
+                    </div>
+
+                    <div class="job-meta">
+                        IPO and stock-market information.
+                    </div>
+
+                </div>
+
+
+                <div class="job-item">
+
+                    <div class="job-title">
+                        Employment Updates
+                    </div>
+
+                    <div class="job-meta">
+                        Useful employment information for job seekers.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     FINANCE
+================================= -->
+
+<section id="finance">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Finance &amp; Investment</h2>
+
+            <p>
+                Explore Nepal's financial and investment information.
+            </p>
+
+        </div>
+
+
+        <div class="finance-grid">
+
+
+            <div class="finance-card">
+
+                <h3>📈 NEPSE</h3>
+
+                <div class="finance-value">
+                    Market Data
+                </div>
+
+                <div class="finance-note">
+                    Market information will be added.
+                </div>
+
+            </div>
+
+
+            <div class="finance-card">
+
+                <h3>🏦 Banking</h3>
+
+                <div class="finance-value">
+                    Banks &amp; Rates
+                </div>
+
+                <div class="finance-note">
+                    Banking information will be added.
+                </div>
+
+            </div>
+
+
+            <div class="finance-card">
+
+                <h3>💰 IPO</h3>
+
+                <div class="finance-value">
+                    IPO Updates
+                </div>
+
+                <div class="finance-note">
+                    IPO information will be added.
+                </div>
+
+            </div>
+
+
+            <div class="finance-card">
+
+                <h3>📊 Economy</h3>
+
+                <div class="finance-value">
+                    Economic News
+                </div>
+
+                <div class="finance-note">
+                    Economic information will be added.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     TOOLS
+================================= -->
+
+<section id="tools">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>Useful Financial Tools</h2>
+
+            <p>
+                Simple calculators and tools for everyday financial decisions.
+            </p>
+
+        </div>
+
+
+        <div class="tools-grid">
+
+            <a href="#" class="tool">
+                🧮 EMI Calculator
+            </a>
+
+            <a href="#" class="tool">
+                💵 Salary Calculator
+            </a>
+
+            <a href="#" class="tool">
+                📊 Investment Calculator
+            </a>
+
+            <a href="#" class="tool">
+                💳 Loan Calculator
+            </a>
+
+            <a href="#" class="tool">
+                📅 Date Calculator
+            </a>
+
+            <a href="#" class="tool">
+                📈 Percentage Calculator
+            </a>
+
+            <a href="#" class="tool">
+                🧾 Tax Calculator
+            </a>
+
+            <a href="#" class="tool">
+                🔢 Unit Converter
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     ABOUT / CTA
+================================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="cta">
+
+            <h2>
+                Building a Useful Digital Platform for Nepal
+            </h2>
+
+            <p>
+                GovindaRegmi.com.np is being developed to bring
+                employment, financial information, useful tools and
+                opportunities together in one place.
+            </p>
+
+            <a href="#" class="cta-button">
+                Learn More
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     FOOTER
+================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <h3>
+                    GovindaRegmi.com.np
+                </h3>
+
+                <p>
+                    A growing Nepal-focused platform for jobs,
+                    finance, opportunities and useful digital tools.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>Jobs</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#jobs">
+                            Nepal Jobs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#jobs">
+                            Foreign Jobs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#jobs">
+                            Government Jobs
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>Finance</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#finance">
+                            NEPSE
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#finance">
+                            IPO
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#finance">
+                            Banking
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#finance">
+                            Economy
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>Information</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Privacy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Disclaimer
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © <span id="year"></span>
+            GovindaRegmi.com.np. All rights reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================================
+     JAVASCRIPT
+================================= -->
+
+<script>
+
+    /* ==========================
+       MOBILE MENU
+    ========================== */
+
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mainNav = document.getElementById("mainNav");
+
+    mobileMenu.addEventListener("click", function () {
+
+        mainNav.classList.toggle("active");
+
+    });
+
+
+    /* ==========================
+       CLOSE MOBILE MENU
+       AFTER CLICKING LINK
+    ========================== */
+
+    const navLinks = document.querySelectorAll("#mainNav a");
+
+    navLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            mainNav.classList.remove("active");
+
+        });
+
+    });
+
+
+    /* ==========================
+       SEARCH
+    ========================== */
+
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+    const searchMessage = document.getElementById("searchMessage");
+
+    function performSearch() {
+
+        const query = searchInput.value.trim();
+
+        if (query === "") {
+
+            searchMessage.style.display = "block";
+
+            searchMessage.innerHTML =
+                "Please enter something to search.";
+
+            return;
+
+        }
+
+
+        searchMessage.style.display = "block";
+
+        searchMessage.innerHTML =
+            "You searched for <strong>" +
+            escapeHTML(query) +
+            "</strong>. Our full search system will be connected as the portal grows.";
+
+    }
+
+
+    searchButton.addEventListener("click", performSearch);
+
+
+    searchInput.addEventListener("keydown", function (event) {
+
+        if (event.key === "Enter") {
+
+            performSearch();
+
+        }
+
+    });
+
+
+    /* ==========================
+       BASIC HTML ESCAPING
+    ========================== */
+
+    function escapeHTML(text) {
+
+        const div = document.createElement("div");
+
+        div.textContent = text;
+
+        return div.innerHTML;
+
+    }
+
+
+    /* ==========================
+       CURRENT YEAR
+    ========================== */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
