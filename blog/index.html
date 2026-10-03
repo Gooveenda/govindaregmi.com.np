@@ -1,0 +1,971 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog | Govinda Regmi</title>
+    <meta name="description" content="Latest insights, guides, jobs, finance, investing, career opportunities and economic news from Nepal.">
+    <meta name="author" content="Govinda Regmi">
+
+    <link rel="canonical" href="https://govindaregmi.com.np/blog/">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0f766e;
+            --primary-dark: #115e59;
+            --secondary: #0f172a;
+            --text: #334155;
+            --muted: #64748b;
+            --light: #f8fafc;
+            --border: #e2e8f0;
+            --white: #ffffff;
+            --accent: #f59e0b;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: #f8fafc;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1180px;
+            margin: auto;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 800;
+            color: var(--secondary);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 26px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-btn {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: linear-gradient(135deg, #0f172a, #134e4a);
+            color: white;
+            padding: 70px 20px;
+        }
+
+        .hero-container {
+            max-width: 1180px;
+            margin: auto;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: rgba(255,255,255,0.12);
+            padding: 7px 13px;
+            border-radius: 30px;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            max-width: 750px;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        /* MAIN */
+
+        .container {
+            max-width: 1180px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            color: var(--secondary);
+        }
+
+        .section-header a {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* CATEGORY */
+
+        .categories {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .category {
+            padding: 9px 16px;
+            border: 1px solid var(--border);
+            background: white;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #475569;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .category:hover,
+        .category.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        /* FEATURED */
+
+        .featured {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 25px;
+            margin-bottom: 55px;
+        }
+
+        .featured-main {
+            min-height: 330px;
+            border-radius: 16px;
+            padding: 35px;
+            background:
+                linear-gradient(rgba(15,23,42,.78), rgba(15,23,42,.9)),
+                linear-gradient(135deg, #0f766e, #0f172a);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .featured-main h2 {
+            font-size: 31px;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+        .featured-main p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .featured-side {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .side-card {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 23px;
+            border-radius: 14px;
+        }
+
+        .side-card h3 {
+            color: var(--secondary);
+            font-size: 19px;
+            line-height: 1.35;
+            margin-bottom: 9px;
+        }
+
+        .side-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 13px;
+        }
+
+        /* ARTICLES */
+
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .article {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .article:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(15,23,42,.08);
+        }
+
+        .article-image {
+            height: 170px;
+            background: linear-gradient(135deg, #ccfbf1, #e2e8f0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+        }
+
+        .article-content {
+            padding: 21px;
+        }
+
+        .article-content h3 {
+            font-size: 19px;
+            line-height: 1.35;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .article-content p {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        /* NEWSLETTER */
+
+        .newsletter {
+            margin-top: 60px;
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .newsletter p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 13px 15px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .newsletter button {
+            border: none;
+            background: var(--primary);
+            color: white;
+            padding: 13px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background: var(--primary-dark);
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 60px;
+            background: var(--secondary);
+            color: #cbd5e1;
+        }
+
+        .footer-container {
+            max-width: 1180px;
+            margin: auto;
+            padding: 45px 20px 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 35px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 13px;
+        }
+
+        footer p {
+            font-size: 14px;
+            max-width: 450px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #334155;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 65px;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 20px;
+                flex-direction: column;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 50px 20px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .featured {
+                grid-template-columns: 1fr;
+            }
+
+            .articles {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="/" class="logo">
+            Govinda<span>Regmi</span>
+        </a>
+
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="/">Home</a>
+            <a href="/jobs/">Jobs</a>
+            <a href="/finance/">Finance</a>
+            <a href="/blog/">Blog</a>
+            <a href="/about/">About</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-container">
+
+        <span class="hero-label">Govinda Regmi Blog</span>
+
+        <h1>
+            Jobs, Money, Careers &amp; Nepal's Economy
+        </h1>
+
+        <p>
+            Practical guides, financial insights, career information,
+            job opportunities and useful resources for people in Nepal
+            and Nepalis around the world.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- MAIN CONTENT -->
+
+<main class="container">
+
+    <!-- CATEGORIES -->
+
+    <div class="categories">
+
+        <button class="category active" onclick="filterPosts('all')">
+            All
+        </button>
+
+        <button class="category" onclick="filterPosts('jobs')">
+            Jobs &amp; Careers
+        </button>
+
+        <button class="category" onclick="filterPosts('finance')">
+            Finance
+        </button>
+
+        <button class="category" onclick="filterPosts('investing')">
+            Investing
+        </button>
+
+        <button class="category" onclick="filterPosts('economy')">
+            Economy
+        </button>
+
+        <button class="category" onclick="filterPosts('guides')">
+            Guides
+        </button>
+
+    </div>
+
+
+    <!-- FEATURED -->
+
+    <div class="section-header">
+        <h2>Featured</h2>
+    </div>
+
+    <section class="featured">
+
+        <article class="featured-main">
+
+            <span class="tag">Featured Guide</span>
+
+            <h2>
+                How to Find Better Job Opportunities in Nepal
+            </h2>
+
+            <p>
+                A practical guide to finding jobs, researching employers,
+                preparing applications and avoiding common mistakes.
+            </p>
+
+            <a href="#" class="read-more">
+                Read article →
+            </a>
+
+        </article>
+
+
+        <div class="featured-side">
+
+            <article class="side-card" data-category="finance">
+
+                <span class="tag">Finance</span>
+
+                <h3>
+                    Understanding Personal Finance in Nepal
+                </h3>
+
+                <p>
+                    Basic principles for managing income, expenses,
+                    savings and financial goals.
+                </p>
+
+                <div class="meta">
+                    Finance · 6 min read
+                </div>
+
+            </article>
+
+
+            <article class="side-card" data-category="investing">
+
+                <span class="tag">Investing</span>
+
+                <h3>
+                    Beginner's Guide to Investing in Nepal
+                </h3>
+
+                <p>
+                    Learn the basic concepts before putting your money
+                    into investments.
+                </p>
+
+                <div class="meta">
+                    Investing · 8 min read
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- LATEST ARTICLES -->
+
+    <div class="section-header">
+        <h2>Latest Articles</h2>
+        <a href="/blog/">View all →</a>
+    </div>
+
+
+    <section class="articles" id="articles">
+
+
+        <!-- ARTICLE 1 -->
+
+        <article class="article" data-category="jobs">
+
+            <div class="article-image">
+                💼
+            </div>
+
+            <div class="article-content">
+
+                <span class="tag">Jobs</span>
+
+                <h3>
+                    How to Search for Jobs in Nepal Online
+                </h3>
+
+                <p>
+                    Useful strategies for finding legitimate job
+                    opportunities online and researching employers.
+                </p>
+
+                <div class="meta">
+                    Jobs &amp; Careers · 5 min read
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ARTICLE 2 -->
+
+        <article class="article" data-category="finance">
+
+            <div class="article-image">
+                💰
+            </div>
+
+            <div class="article-content">
+
+                <span class="tag">Finance</span>
+
+                <h3>
+                    Simple Ways to Manage Your Monthly Budget
+                </h3>
+
+                <p>
+                    A simple framework for tracking income, expenses,
+                    savings and financial priorities.
+                </p>
+
+                <div class="meta">
+                    Finance · 6 min read
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ARTICLE 3 -->
+
+        <article class="article" data-category="investing">
+
+            <div class="article-image">
+                📈
+            </div>
+
+            <div class="article-content">
+
+                <span class="tag">Investing</span>
+
+                <h3>
+                    Investing Basics Every Beginner Should Understand
+                </h3>
+
+                <p>
+                    Learn about risk, return, diversification and
+                    long-term investing before getting started.
+                </p>
+
+                <div class="meta">
+                    Investing · 7 min read
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ARTICLE 4 -->
+
+        <article class="article" data-category="economy">
+
+            <div class="article-image">
+                🇳🇵
+            </div>
+
+            <div class="article-content">
+
+                <span class="tag">Economy</span>
+
+                <h3>
+                    Understanding Nepal's Economy: A Beginner's Guide
+                </h3>
+
+                <p>
+                    An easy introduction to the major factors that
+                    influence Nepal's economy.
+                </p>
+
+                <div class="meta">
+                    Economy · 8 min read
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ARTICLE 5 -->
+
+        <article class="article" data-category="guides">
+
+            <div class="article-image">
+                🧭
+            </div>
+
+            <div class="article-content">
+
+                <span class="tag">Guide</span>
+
+                <h3>
+                    How to Build a Better Career Plan
+                </h3>
+
+                <p>
+                    A practical framework for choosing skills,
+                    opportunities and career goals.
+                </p>
+
+                <div class="meta">
+                    Career Guide · 7 min read
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ARTICLE 6 -->
+
+        <article class="article" data-category="jobs">
+
+            <div class="article-image">
+                🌍
+            </div>
+
+            <div class="article-content">
+
+                <span class="tag">Jobs</span>
+
+                <h3>
+                    Things to Check Before Applying for a Foreign Job
+                </h3>
+
+                <p>
+                    Important information to research before applying
+                    for overseas employment opportunities.
+                </p>
+
+                <div class="meta">
+                    Jobs &amp; Careers · 9 min read
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+
+    <section class="newsletter">
+
+        <h2>Get Useful Updates</h2>
+
+        <p>
+            Future updates can include new jobs, financial guides,
+            career resources and important economic information.
+        </p>
+
+        <form class="newsletter-form" onsubmit="subscribe(event)">
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                aria-label="Email address"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-grid">
+
+            <div>
+                <h3>Govinda Regmi</h3>
+
+                <p>
+                    A growing online platform focused on jobs,
+                    finance, careers, investing and useful information
+                    for Nepal.
+                </p>
+            </div>
+
+
+            <div>
+
+                <h3>Explore</h3>
+
+                <ul>
+                    <li><a href="/jobs/">Jobs</a></li>
+                    <li><a href="/finance/">Finance</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/about/">About</a></li>
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>Categories</h3>
+
+                <ul>
+                    <li><a href="#">Jobs &amp; Careers</a></li>
+                    <li><a href="#">Finance</a></li>
+                    <li><a href="#">Investing</a></li>
+                    <li><a href="#">Economy</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © <span id="year"></span> Govinda Regmi. All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    // Mobile navigation
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("show");
+    }
+
+
+    // Category filtering
+    function filterPosts(category) {
+
+        const articles =
+            document.querySelectorAll(".article");
+
+        const buttons =
+            document.querySelectorAll(".category");
+
+        buttons.forEach(button => {
+            button.classList.remove("active");
+        });
+
+        event.target.classList.add("active");
+
+        articles.forEach(article => {
+
+            const articleCategory =
+                article.getAttribute("data-category");
+
+            if (category === "all" ||
+                articleCategory === category) {
+
+                article.style.display = "block";
+
+            } else {
+
+                article.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+
+    // Newsletter placeholder
+    function subscribe(event) {
+
+        event.preventDefault();
+
+        alert(
+            "Newsletter subscription will be connected soon."
+        );
+
+    }
+
+
+    // Current year
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
+```
