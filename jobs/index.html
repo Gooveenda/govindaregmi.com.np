@@ -1,0 +1,2242 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jobs in Nepal | Nepal Jobs & Foreign Employment | GovindaRegmi.com.np</title>
+
+    <meta name="description"
+          content="Find Nepal jobs, foreign employment opportunities and government job information. Search jobs by country, category and employment type on GovindaRegmi.com.np.">
+
+    <meta name="keywords"
+          content="Nepal jobs, jobs in Nepal, foreign jobs, government jobs Nepal, Nepal employment, overseas jobs, job search Nepal">
+
+    <meta name="author" content="GovindaRegmi.com.np">
+
+    <meta name="theme-color" content="#0f3d5e">
+
+
+    <style>
+
+        /* =========================================
+           RESET & GLOBAL
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        select {
+            font-family: inherit;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-main {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 800;
+            color: #0f3d5e;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #d97706;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        nav a {
+            font-size: 15px;
+            font-weight: 600;
+            color: #374151;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #0f3d5e;
+        }
+
+        nav a.active {
+            color: #d97706;
+        }
+
+        .mobile-menu {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 27px;
+            cursor: pointer;
+            color: #0f3d5e;
+        }
+
+
+        /* =========================================
+           PAGE HERO
+        ========================================= */
+
+        .page-hero {
+            background: linear-gradient(135deg, #0f3d5e, #155e75);
+            color: white;
+            padding: 55px 0;
+        }
+
+        .page-hero-content {
+            max-width: 850px;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 18px;
+            color: #bae6fd;
+        }
+
+        .breadcrumb a {
+            color: #ffffff;
+        }
+
+        .page-hero h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .page-hero p {
+            font-size: 17px;
+            color: #e0f2fe;
+            max-width: 750px;
+        }
+
+
+        /* =========================================
+           JOB SEARCH AREA
+        ========================================= */
+
+        .search-section {
+            margin-top: -28px;
+            position: relative;
+        }
+
+        .search-panel {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.09);
+            border: 1px solid #e5e7eb;
+        }
+
+        .search-panel h2 {
+            font-size: 20px;
+            color: #0f3d5e;
+            margin-bottom: 18px;
+        }
+
+        .search-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr auto;
+            gap: 12px;
+        }
+
+        .search-field {
+            width: 100%;
+            min-height: 48px;
+            border: 1px solid #d1d5db;
+            border-radius: 7px;
+            padding: 0 14px;
+            outline: none;
+            background: #ffffff;
+            color: #1f2937;
+            font-size: 14px;
+        }
+
+        .search-field:focus {
+            border-color: #0f3d5e;
+            box-shadow: 0 0 0 2px rgba(15, 61, 94, 0.1);
+        }
+
+        .search-button {
+            min-height: 48px;
+            padding: 0 25px;
+            border: none;
+            border-radius: 7px;
+            background: #d97706;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .search-button:hover {
+            background: #b45309;
+        }
+
+        .clear-button {
+            display: none;
+            margin-top: 12px;
+            border: none;
+            background: none;
+            color: #64748b;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .clear-button:hover {
+            color: #0f3d5e;
+        }
+
+
+        /* =========================================
+           JOB CATEGORY LINKS
+        ========================================= */
+
+        .category-section {
+            padding: 45px 0 20px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .category-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 9px;
+            padding: 18px;
+            text-align: center;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-3px);
+            border-color: #0f3d5e;
+        }
+
+        .category-icon {
+            font-size: 27px;
+            margin-bottom: 7px;
+        }
+
+        .category-card h3 {
+            color: #0f3d5e;
+            font-size: 16px;
+        }
+
+        .category-card p {
+            color: #64748b;
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+
+        /* =========================================
+           MAIN JOB AREA
+        ========================================= */
+
+        .jobs-section {
+            padding: 50px 0 70px;
+        }
+
+        .jobs-layout {
+            display: grid;
+            grid-template-columns: 1fr 310px;
+            gap: 25px;
+            align-items: start;
+        }
+
+
+        /* =========================================
+           JOB RESULTS HEADER
+        ========================================= */
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+            gap: 15px;
+        }
+
+        .results-header h2 {
+            color: #0f3d5e;
+            font-size: 25px;
+        }
+
+        .results-count {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           JOB CARD
+        ========================================= */
+
+        .job-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 23px;
+            margin-bottom: 15px;
+            transition: 0.2s;
+        }
+
+        .job-card:hover {
+            border-color: #b8c5cf;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+        }
+
+        .job-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .job-title {
+            color: #0f3d5e;
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .company {
+            color: #475569;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .job-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        .job-description {
+            color: #64748b;
+            font-size: 14px;
+            margin: 14px 0;
+        }
+
+        .job-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .job-tag {
+            display: inline-block;
+            background: #eff6ff;
+            color: #1d4ed8;
+            padding: 4px 9px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .job-tag.green {
+            background: #ecfdf5;
+            color: #047857;
+        }
+
+        .job-tag.orange {
+            background: #fff7ed;
+            color: #c2410c;
+        }
+
+        .job-date {
+            color: #94a3b8;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .job-bottom {
+            margin-top: 17px;
+            padding-top: 15px;
+            border-top: 1px solid #edf0f2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .salary {
+            color: #047857;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .details-button {
+            background: #0f3d5e;
+            color: white;
+            border: none;
+            padding: 9px 15px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .details-button:hover {
+            background: #082f49;
+        }
+
+
+        /* =========================================
+           SIDEBAR
+        ========================================= */
+
+        .sidebar-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-card h3 {
+            color: #0f3d5e;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-list {
+            list-style: none;
+        }
+
+        .sidebar-list li {
+            border-bottom: 1px solid #edf0f2;
+        }
+
+        .sidebar-list li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-list button {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 11px 0;
+            color: #475569;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .sidebar-list button:hover {
+            color: #d97706;
+        }
+
+        .info-box {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 15px;
+            color: #164e63;
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           NO RESULTS
+        ========================================= */
+
+        .no-results {
+            display: none;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 40px 25px;
+            text-align: center;
+        }
+
+        .no-results-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .no-results h3 {
+            color: #0f3d5e;
+            margin-bottom: 6px;
+        }
+
+        .no-results p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .cta-section {
+            padding: 0 0 70px;
+        }
+
+        .cta {
+            background: #0f3d5e;
+            color: white;
+            border-radius: 12px;
+            padding: 42px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 28px;
+            margin-bottom: 9px;
+        }
+
+        .cta p {
+            color: #dbeafe;
+            max-width: 700px;
+            margin: auto;
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: #111827;
+            color: #cbd5e1;
+            padding: 50px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 35px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            font-size: 14px;
+            max-width: 380px;
+        }
+
+        footer h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 9px;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #374151;
+            margin-top: 35px;
+            padding-top: 20px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .search-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .search-button {
+                width: 100%;
+            }
+
+            .jobs-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .sidebar-card {
+                margin-bottom: 0;
+            }
+
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 800px) {
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sidebar {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 94%;
+            }
+
+            .page-hero {
+                padding: 45px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 31px;
+            }
+
+            .page-hero p {
+                font-size: 15px;
+            }
+
+            .search-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .job-top {
+                flex-direction: column;
+                gap: 7px;
+            }
+
+            .job-date {
+                white-space: normal;
+            }
+
+            .job-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .details-button {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                padding: 32px 20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header>
+
+    <div class="container header-main">
+
+        <a href="../index.html" class="logo">
+            Govinda<span>Regmi</span>.com.np
+        </a>
+
+        <button class="mobile-menu" id="mobileMenu">
+            ☰
+        </button>
+
+        <nav id="mainNav">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="index.html" class="active">
+                Jobs
+            </a>
+
+            <a href="../index.html#finance">
+                Finance
+            </a>
+
+            <a href="../index.html#tools">
+                Tools
+            </a>
+
+            <a href="../index.html#news">
+                News
+            </a>
+
+            <a href="../index.html#about">
+                About
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     PAGE HERO
+========================================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <div class="page-hero-content">
+
+            <div class="breadcrumb">
+
+                <a href="../index.html">Home</a>
+                &nbsp; / &nbsp;
+                Jobs
+
+            </div>
+
+            <h1>
+                Find Jobs &amp; Employment Opportunities
+            </h1>
+
+            <p>
+                Search for employment opportunities in Nepal and abroad.
+                This section will grow into a nationwide job-search platform
+                for Nepali job seekers.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     SEARCH
+========================================= -->
+
+<section class="search-section">
+
+    <div class="container">
+
+        <div class="search-panel">
+
+            <h2>
+                🔎 Search Jobs
+            </h2>
+
+            <div class="search-grid">
+
+                <input
+                    type="text"
+                    id="keyword"
+                    class="search-field"
+                    placeholder="Job title, company or keyword..."
+                >
+
+                <select id="location" class="search-field">
+
+                    <option value="">
+                        All Locations
+                    </option>
+
+                    <option value="Nepal">
+                        Nepal
+                    </option>
+
+                    <option value="Saudi Arabia">
+                        Saudi Arabia
+                    </option>
+
+                    <option value="Qatar">
+                        Qatar
+                    </option>
+
+                    <option value="UAE">
+                        UAE
+                    </option>
+
+                    <option value="Malaysia">
+                        Malaysia
+                    </option>
+
+                    <option value="Kuwait">
+                        Kuwait
+                    </option>
+
+                </select>
+
+
+                <select id="category" class="search-field">
+
+                    <option value="">
+                        All Categories
+                    </option>
+
+                    <option value="Engineering">
+                        Engineering
+                    </option>
+
+                    <option value="Construction">
+                        Construction
+                    </option>
+
+                    <option value="Hospitality">
+                        Hospitality
+                    </option>
+
+                    <option value="Accounting">
+                        Accounting
+                    </option>
+
+                    <option value="Administration">
+                        Administration
+                    </option>
+
+                    <option value="IT">
+                        IT &amp; Technology
+                    </option>
+
+                </select>
+
+
+                <button
+                    class="search-button"
+                    id="searchButton">
+                    Search
+                </button>
+
+            </div>
+
+
+            <button
+                class="clear-button"
+                id="clearButton">
+
+                Clear search
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     JOB CATEGORIES
+========================================= -->
+
+<section class="category-section">
+
+    <div class="container">
+
+        <div class="category-grid">
+
+
+            <div class="category-card"
+                 data-category="Nepal">
+
+                <div class="category-icon">
+                    🇳🇵
+                </div>
+
+                <h3>
+                    Nepal Jobs
+                </h3>
+
+                <p>
+                    Opportunities inside Nepal
+                </p>
+
+            </div>
+
+
+            <div class="category-card"
+                 data-category="Foreign">
+
+                <div class="category-icon">
+                    🌍
+                </div>
+
+                <h3>
+                    Foreign Jobs
+                </h3>
+
+                <p>
+                    Overseas employment
+                </p>
+
+            </div>
+
+
+            <div class="category-card"
+                 data-category="Government">
+
+                <div class="category-icon">
+                    🏛️
+                </div>
+
+                <h3>
+                    Government Jobs
+                </h3>
+
+                <p>
+                    Public sector opportunities
+                </p>
+
+            </div>
+
+
+            <div class="category-card"
+                 data-category="Private">
+
+                <div class="category-icon">
+                    🏢
+                </div>
+
+                <h3>
+                    Private Jobs
+                </h3>
+
+                <p>
+                    Companies &amp; organizations
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     JOB RESULTS
+========================================= -->
+
+<section class="jobs-section">
+
+    <div class="container">
+
+        <div class="jobs-layout">
+
+
+            <!-- =================================
+                 JOB LIST
+            ================================== -->
+
+            <main>
+
+                <div class="results-header">
+
+                    <div>
+
+                        <h2>
+                            Latest Job Opportunities
+                        </h2>
+
+                        <div class="results-count"
+                             id="resultsCount">
+
+                            Showing 6 example listings
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div id="jobList">
+
+
+                    <!-- JOB 1 -->
+
+                    <article
+                        class="job-card"
+                        data-title="Electrical Technician"
+                        data-company="Example Employer"
+                        data-location="Saudi Arabia"
+                        data-category="Engineering Foreign">
+
+                        <div class="job-top">
+
+                            <div>
+
+                                <div class="job-title">
+                                    Electrical Technician
+                                </div>
+
+                                <div class="company">
+                                    🏢 Example Employer
+                                </div>
+
+                            </div>
+
+                            <div class="job-date">
+                                Example listing
+                            </div>
+
+                        </div>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                📍 Saudi Arabia
+                            </span>
+
+                            <span>
+                                👥 Multiple Positions
+                            </span>
+
+                            <span>
+                                ⚙️ Engineering
+                            </span>
+
+                        </div>
+
+
+                        <p class="job-description">
+
+                            Example job listing for demonstration.
+                            Real employment data will be added in a
+                            later version.
+
+                        </p>
+
+
+                        <div class="job-tags">
+
+                            <span class="job-tag">
+                                Foreign Job
+                            </span>
+
+                            <span class="job-tag green">
+                                Engineering
+                            </span>
+
+                        </div>
+
+
+                        <div class="job-bottom">
+
+                            <div class="salary">
+                                💰 Salary: To be verified
+                            </div>
+
+                            <button
+                                class="details-button"
+                                onclick="showDemoMessage()">
+
+                                View Details
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 2 -->
+
+                    <article
+                        class="job-card"
+                        data-title="Accountant"
+                        data-company="Example Company Nepal"
+                        data-location="Nepal"
+                        data-category="Accounting Nepal Private">
+
+                        <div class="job-top">
+
+                            <div>
+
+                                <div class="job-title">
+                                    Accountant
+                                </div>
+
+                                <div class="company">
+                                    🏢 Example Company Nepal
+                                </div>
+
+                            </div>
+
+                            <div class="job-date">
+                                Example listing
+                            </div>
+
+                        </div>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                📍 Nepal
+                            </span>
+
+                            <span>
+                                👥 Full Time
+                            </span>
+
+                            <span>
+                                📊 Accounting
+                            </span>
+
+                        </div>
+
+
+                        <p class="job-description">
+
+                            Example Nepal-based accounting position.
+                            This is placeholder content for the first
+                            version of the job portal.
+
+                        </p>
+
+
+                        <div class="job-tags">
+
+                            <span class="job-tag">
+                                Nepal Job
+                            </span>
+
+                            <span class="job-tag green">
+                                Accounting
+                            </span>
+
+                        </div>
+
+
+                        <div class="job-bottom">
+
+                            <div class="salary">
+                                💰 Salary: To be verified
+                            </div>
+
+                            <button
+                                class="details-button"
+                                onclick="showDemoMessage()">
+
+                                View Details
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 3 -->
+
+                    <article
+                        class="job-card"
+                        data-title="Construction Worker"
+                        data-company="Example Employer"
+                        data-location="Qatar"
+                        data-category="Construction Foreign">
+
+                        <div class="job-top">
+
+                            <div>
+
+                                <div class="job-title">
+                                    Construction Worker
+                                </div>
+
+                                <div class="company">
+                                    🏢 Example Employer
+                                </div>
+
+                            </div>
+
+                            <div class="job-date">
+                                Example listing
+                            </div>
+
+                        </div>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                📍 Qatar
+                            </span>
+
+                            <span>
+                                👥 Multiple Positions
+                            </span>
+
+                            <span>
+                                🏗️ Construction
+                            </span>
+
+                        </div>
+
+
+                        <p class="job-description">
+
+                            Example foreign employment listing for
+                            construction-related work.
+
+                        </p>
+
+
+                        <div class="job-tags">
+
+                            <span class="job-tag">
+                                Foreign Job
+                            </span>
+
+                            <span class="job-tag orange">
+                                Construction
+                            </span>
+
+                        </div>
+
+
+                        <div class="job-bottom">
+
+                            <div class="salary">
+                                💰 Salary: To be verified
+                            </div>
+
+                            <button
+                                class="details-button"
+                                onclick="showDemoMessage()">
+
+                                View Details
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 4 -->
+
+                    <article
+                        class="job-card"
+                        data-title="IT Support Assistant"
+                        data-company="Example Technology Company"
+                        data-location="Nepal"
+                        data-category="IT Nepal Private">
+
+                        <div class="job-top">
+
+                            <div>
+
+                                <div class="job-title">
+                                    IT Support Assistant
+                                </div>
+
+                                <div class="company">
+                                    🏢 Example Technology Company
+                                </div>
+
+                            </div>
+
+                            <div class="job-date">
+                                Example listing
+                            </div>
+
+                        </div>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                📍 Nepal
+                            </span>
+
+                            <span>
+                                👥 Full Time
+                            </span>
+
+                            <span>
+                                💻 IT &amp; Technology
+                            </span>
+
+                        </div>
+
+
+                        <p class="job-description">
+
+                            Example information technology job listing
+                            for demonstration purposes.
+
+                        </p>
+
+
+                        <div class="job-tags">
+
+                            <span class="job-tag">
+                                Nepal Job
+                            </span>
+
+                            <span class="job-tag green">
+                                IT
+                            </span>
+
+                        </div>
+
+
+                        <div class="job-bottom">
+
+                            <div class="salary">
+                                💰 Salary: To be verified
+                            </div>
+
+                            <button
+                                class="details-button"
+                                onclick="showDemoMessage()">
+
+                                View Details
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 5 -->
+
+                    <article
+                        class="job-card"
+                        data-title="Hotel Staff"
+                        data-company="Example Hospitality Employer"
+                        data-location="UAE"
+                        data-category="Hospitality Foreign">
+
+                        <div class="job-top">
+
+                            <div>
+
+                                <div class="job-title">
+                                    Hotel Staff
+                                </div>
+
+                                <div class="company">
+                                    🏢 Example Hospitality Employer
+                                </div>
+
+                            </div>
+
+                            <div class="job-date">
+                                Example listing
+                            </div>
+
+                        </div>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                📍 UAE
+                            </span>
+
+                            <span>
+                                👥 Multiple Positions
+                            </span>
+
+                            <span>
+                                🏨 Hospitality
+                            </span>
+
+                        </div>
+
+
+                        <p class="job-description">
+
+                            Example hospitality employment opportunity
+                            for the foreign jobs section.
+
+                        </p>
+
+
+                        <div class="job-tags">
+
+                            <span class="job-tag">
+                                Foreign Job
+                            </span>
+
+                            <span class="job-tag orange">
+                                Hospitality
+                            </span>
+
+                        </div>
+
+
+                        <div class="job-bottom">
+
+                            <div class="salary">
+                                💰 Salary: To be verified
+                            </div>
+
+                            <button
+                                class="details-button"
+                                onclick="showDemoMessage()">
+
+                                View Details
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 6 -->
+
+                    <article
+                        class="job-card"
+                        data-title="Administrative Assistant"
+                        data-company="Example Organization"
+                        data-location="Nepal"
+                        data-category="Administration Government">
+
+                        <div class="job-top">
+
+                            <div>
+
+                                <div class="job-title">
+                                    Administrative Assistant
+                                </div>
+
+                                <div class="company">
+                                    🏛️ Example Organization
+                                </div>
+
+                            </div>
+
+                            <div class="job-date">
+                                Example listing
+                            </div>
+
+                        </div>
+
+
+                        <div class="job-meta">
+
+                            <span>
+                                📍 Nepal
+                            </span>
+
+                            <span>
+                                👥 Full Time
+                            </span>
+
+                            <span>
+                                📁 Administration
+                            </span>
+
+                        </div>
+
+
+                        <p class="job-description">
+
+                            Example administrative position included
+                            to demonstrate the job-search interface.
+
+                        </p>
+
+
+                        <div class="job-tags">
+
+                            <span class="job-tag">
+                                Nepal Job
+                            </span>
+
+                            <span class="job-tag green">
+                                Administration
+                            </span>
+
+                        </div>
+
+
+                        <div class="job-bottom">
+
+                            <div class="salary">
+                                💰 Salary: To be verified
+                            </div>
+
+                            <button
+                                class="details-button"
+                                onclick="showDemoMessage()">
+
+                                View Details
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- NO RESULTS -->
+
+                <div
+                    class="no-results"
+                    id="noResults">
+
+                    <div class="no-results-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        No matching jobs found
+                    </h3>
+
+                    <p>
+                        Try changing your keyword, location or category.
+                    </p>
+
+                </div>
+
+            </main>
+
+
+            <!-- =================================
+                 SIDEBAR
+            ================================== -->
+
+            <aside class="sidebar">
+
+
+                <div class="sidebar-card">
+
+                    <h3>
+                        Job Categories
+                    </h3>
+
+                    <ul class="sidebar-list">
+
+                        <li>
+                            <button
+                                onclick="filterByKeyword('Nepal')">
+                                🇳🇵 Nepal Jobs
+                            </button>
+                        </li>
+
+                        <li>
+                            <button
+                                onclick="filterByKeyword('Foreign')">
+                                🌍 Foreign Jobs
+                            </button>
+                        </li>
+
+                        <li>
+                            <button
+                                onclick="filterByKeyword('Government')">
+                                🏛️ Government Jobs
+                            </button>
+                        </li>
+
+                        <li>
+                            <button
+                                onclick="filterByKeyword('Private')">
+                                🏢 Private Jobs
+                            </button>
+                        </li>
+
+                        <li>
+                            <button
+                                onclick="filterByKeyword('Engineering')">
+                                ⚙️ Engineering
+                            </button>
+                        </li>
+
+                        <li>
+                            <button
+                                onclick="filterByKeyword('IT')">
+                                💻 IT &amp; Technology
+                            </button>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="sidebar-card">
+
+                    <h3>
+                        Important Information
+                    </h3>
+
+                    <div class="info-box">
+
+                        <strong>Notice:</strong>
+
+                        <br><br>
+
+                        The listings currently displayed on this
+                        page are demonstration content.
+
+                        <br><br>
+
+                        Verified job data and official sources will
+                        be added as the platform develops.
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta">
+
+            <h2>
+                One Place for Nepal's Job Seekers
+            </h2>
+
+            <p>
+
+                GovindaRegmi.com.np is being developed into a
+                nationwide platform connecting job seekers with
+                useful employment information and opportunities.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <h3>
+                    GovindaRegmi.com.np
+                </h3>
+
+                <p>
+
+                    A growing Nepal-focused platform for jobs,
+                    finance, opportunities and useful digital tools.
+
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Jobs
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            All Jobs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#jobs">
+                            Nepal Jobs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#jobs">
+                            Foreign Jobs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#jobs">
+                            Government Jobs
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Finance
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#finance">
+                            NEPSE
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#finance">
+                            IPO
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#finance">
+                            Banking
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Website
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Privacy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Disclaimer
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © <span id="year"></span>
+            GovindaRegmi.com.np.
+            All rights reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+
+    /* =========================================
+       MOBILE MENU
+    ========================================= */
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+    const mainNav =
+        document.getElementById("mainNav");
+
+
+    mobileMenu.addEventListener("click", function () {
+
+        mainNav.classList.toggle("active");
+
+    });
+
+
+    /* =========================================
+       CLOSE MOBILE MENU AFTER CLICK
+    ========================================= */
+
+    const navLinks =
+        document.querySelectorAll("#mainNav a");
+
+
+    navLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            mainNav.classList.remove("active");
+
+        });
+
+    });
+
+
+    /* =========================================
+       JOB SEARCH
+    ========================================= */
+
+    const keywordInput =
+        document.getElementById("keyword");
+
+    const locationInput =
+        document.getElementById("location");
+
+    const categoryInput =
+        document.getElementById("category");
+
+    const searchButton =
+        document.getElementById("searchButton");
+
+    const clearButton =
+        document.getElementById("clearButton");
+
+    const resultsCount =
+        document.getElementById("resultsCount");
+
+    const noResults =
+        document.getElementById("noResults");
+
+    const jobCards =
+        document.querySelectorAll(".job-card");
+
+
+    function searchJobs() {
+
+        const keyword =
+            keywordInput.value
+                .toLowerCase()
+                .trim();
+
+        const location =
+            locationInput.value
+                .toLowerCase()
+                .trim();
+
+        const category =
+            categoryInput.value
+                .toLowerCase()
+                .trim();
+
+
+        let visibleJobs = 0;
+
+
+        jobCards.forEach(function (job) {
+
+            const title =
+                job.dataset.title
+                    .toLowerCase();
+
+            const company =
+                job.dataset.company
+                    .toLowerCase();
+
+            const jobLocation =
+                job.dataset.location
+                    .toLowerCase();
+
+            const jobCategory =
+                job.dataset.category
+                    .toLowerCase();
+
+
+            const matchesKeyword =
+                keyword === "" ||
+                title.includes(keyword) ||
+                company.includes(keyword) ||
+                jobLocation.includes(keyword) ||
+                jobCategory.includes(keyword);
+
+
+            const matchesLocation =
+                location === "" ||
+                jobLocation === location;
+
+
+            const matchesCategory =
+                category === "" ||
+                jobCategory.includes(category);
+
+
+            if (
+                matchesKeyword &&
+                matchesLocation &&
+                matchesCategory
+            ) {
+
+                job.style.display = "block";
+
+                visibleJobs++;
+
+            } else {
+
+                job.style.display = "none";
+
+            }
+
+        });
+
+
+        if (visibleJobs === 0) {
+
+            noResults.style.display = "block";
+
+        } else {
+
+            noResults.style.display = "none";
+
+        }
+
+
+        resultsCount.textContent =
+            "Showing " +
+            visibleJobs +
+            " example listing" +
+            (visibleJobs === 1 ? "" : "s");
+
+
+        if (
+            keyword !== "" ||
+            location !== "" ||
+            category !== ""
+        ) {
+
+            clearButton.style.display =
+                "block";
+
+        } else {
+
+            clearButton.style.display =
+                "none";
+
+        }
+
+    }
+
+
+    searchButton.addEventListener(
+        "click",
+        searchJobs
+    );
+
+
+    keywordInput.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Enter") {
+
+                searchJobs();
+
+            }
+
+        }
+    );
+
+
+    locationInput.addEventListener(
+        "change",
+        searchJobs
+    );
+
+
+    categoryInput.addEventListener(
+        "change",
+        searchJobs
+    );
+
+
+    /* =========================================
+       CLEAR SEARCH
+    ========================================= */
+
+    clearButton.addEventListener(
+        "click",
+        function () {
+
+            keywordInput.value = "";
+
+            locationInput.value = "";
+
+            categoryInput.value = "";
+
+            searchJobs();
+
+        }
+    );
+
+
+    /* =========================================
+       SIDEBAR FILTER
+    ========================================= */
+
+    function filterByKeyword(value) {
+
+        keywordInput.value = value;
+
+        locationInput.value = "";
+
+        categoryInput.value = "";
+
+        searchJobs();
+
+        document
+            .querySelector(".jobs-section")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    }
+
+
+    /* =========================================
+       CATEGORY CARDS
+    ========================================= */
+
+    const categoryCards =
+        document.querySelectorAll(
+            ".category-card"
+        );
+
+
+    categoryCards.forEach(function (card) {
+
+        card.addEventListener(
+            "click",
+            function () {
+
+                const category =
+                    card.dataset.category;
+
+                if (category === "Nepal") {
+
+                    keywordInput.value =
+                        "Nepal";
+
+                }
+
+                else if (category === "Foreign") {
+
+                    keywordInput.value =
+                        "Foreign";
+
+                }
+
+                else if (category === "Government") {
+
+                    keywordInput.value =
+                        "Government";
+
+                }
+
+                else if (category === "Private") {
+
+                    keywordInput.value =
+                        "Private";
+
+                }
+
+                searchJobs();
+
+                document
+                    .querySelector(".jobs-section")
+                    .scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+            }
+        );
+
+    });
+
+
+    /* =========================================
+       DEMO JOB DETAILS
+    ========================================= */
+
+    function showDemoMessage() {
+
+        alert(
+            "This is a demonstration listing. " +
+            "Real job details and verified application " +
+            "information will be added in a future version."
+        );
+
+    }
+
+
+    /* =========================================
+       CURRENT YEAR
+    ========================================= */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+</script>
+
+
+</body>
+
+</html>
+```
