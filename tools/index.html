@@ -1,0 +1,2123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Free Online Tools & Calculators | GovindaRegmi.com.np</title>
+
+    <meta name="description" content="Free online calculators and utility tools including age, EMI, loan, investment, percentage, VAT, salary, GPA, date, unit conversion and more.">
+    <meta name="keywords" content="online tools, free calculators, age calculator, EMI calculator, loan calculator, investment calculator, VAT calculator, salary calculator, percentage calculator, GPA calculator">
+
+    <meta property="og:title" content="Free Online Tools & Calculators | GovindaRegmi.com.np">
+    <meta property="og:description" content="Free online calculators and useful utility tools for everyday life, finance, education and work.">
+    <meta property="og:type" content="website">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        select {
+            font-family: inherit;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 600;
+            color: #475569;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #2563eb;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+            padding: 70px 20px;
+        }
+
+        .hero-inner {
+            max-width: 1050px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 7px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: auto;
+            color: #dbeafe;
+            font-size: 17px;
+        }
+
+        .search-box {
+            max-width: 650px;
+            margin: 30px auto 0;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 55px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .section-header h2 {
+            font-size: 30px;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .section-header p {
+            color: #64748b;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* =========================
+           CATEGORY FILTER
+        ========================= */
+
+        .category-bar {
+            display: flex;
+            justify-content: center;
+            gap: 9px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .category-btn {
+            border: 1px solid #dbe2ea;
+            background: white;
+            color: #475569;
+            padding: 9px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        /* =========================
+           TOOLS GRID
+        ========================= */
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .tool-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 23px;
+            transition: 0.2s;
+            display: flex;
+            flex-direction: column;
+            min-height: 205px;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(15,23,42,0.08);
+        }
+
+        .tool-icon {
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: #eff6ff;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .tool-card h3 {
+            font-size: 18px;
+            color: #0f172a;
+            margin-bottom: 7px;
+        }
+
+        .tool-card p {
+            color: #64748b;
+            font-size: 13px;
+            flex-grow: 1;
+        }
+
+        .tool-btn {
+            display: inline-block;
+            margin-top: 17px;
+            color: #2563eb;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* =========================
+           FEATURED CALCULATORS
+        ========================= */
+
+        .calculator-section {
+            background: #eef4ff;
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .calculator {
+            background: white;
+            border: 1px solid #dbeafe;
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .calculator h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: #0f172a;
+        }
+
+        .calculator-description {
+            color: #64748b;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 13px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #334155;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            padding: 11px 12px;
+            outline: none;
+            background: white;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            border-color: #2563eb;
+        }
+
+        .calculate-btn {
+            width: 100%;
+            border: none;
+            background: #2563eb;
+            color: white;
+            padding: 11px;
+            border-radius: 7px;
+            font-weight: 800;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .calculate-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .result {
+            display: none;
+            margin-top: 17px;
+            padding: 15px;
+            border-radius: 9px;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+        }
+
+        .result strong {
+            color: #1d4ed8;
+            font-size: 19px;
+        }
+
+        .result p {
+            color: #475569;
+            font-size: 13px;
+            margin-top: 3px;
+        }
+
+        /* =========================
+           POPULAR TOOLS
+        ========================= */
+
+        .popular-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .popular-item {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .popular-item .emoji {
+            font-size: 25px;
+            margin-bottom: 7px;
+        }
+
+        .popular-item h3 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .popular-item p {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background: #0f172a;
+            color: white;
+            border-radius: 18px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 28px;
+            margin-bottom: 9px;
+        }
+
+        .cta p {
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: auto auto 22px;
+        }
+
+        .cta a {
+            display: inline-block;
+            background: white;
+            color: #1d4ed8;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 800;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            margin-top: 60px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: auto;
+            padding: 45px 20px 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 35px;
+            margin-bottom: 35px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            color: #94a3b8;
+            max-width: 350px;
+        }
+
+        .footer-column h4 {
+            color: white;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #94a3b8;
+            font-size: 13px;
+            margin-bottom: 7px;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #1e293b;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        /* =========================
+           NO RESULTS
+        ========================= */
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 35px;
+            color: #64748b;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 65px;
+                left: 0;
+                width: 100%;
+                background: white;
+                border-bottom: 1px solid #e2e8f0;
+                padding: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .popular-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .hero {
+                padding: 55px 20px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .section {
+                padding: 45px 0;
+            }
+
+            .section-header h2 {
+                font-size: 25px;
+            }
+
+            .tools-grid,
+            .popular-list {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                padding: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="/" class="logo">
+            Govinda<span>Regmi</span>.com.np
+        </a>
+
+        <button class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open navigation">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="/">Home</a>
+
+            <a href="/jobs/">Jobs</a>
+
+            <a href="/finance/">Finance</a>
+
+            <a href="/tools/" class="active">Tools</a>
+
+            <a href="/blog/">Blog</a>
+
+            <a href="/about/">About</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="hero-badge">
+            Free • Simple • Useful
+        </div>
+
+        <h1>
+            Free Online Tools & Calculators
+        </h1>
+
+        <p>
+            Calculate, convert, compare and solve everyday problems
+            with simple online tools designed for finance, education,
+            work and daily life.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="toolSearch"
+                placeholder="Search tools... e.g. EMI, age, GPA, percentage"
+                onkeyup="searchTools()"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TOOL DIRECTORY
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>
+                Explore All Tools
+            </h2>
+
+            <p>
+                Choose a category or search for the tool you need.
+            </p>
+
+        </div>
+
+
+        <div class="category-bar">
+
+            <button class="category-btn active"
+                    onclick="filterTools('all', this)">
+                All
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterTools('finance', this)">
+                Finance
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterTools('education', this)">
+                Education
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterTools('date', this)">
+                Date & Time
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterTools('conversion', this)">
+                Conversion
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterTools('text', this)">
+                Text
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterTools('image', this)">
+                Image & PDF
+            </button>
+
+        </div>
+
+
+        <div class="tools-grid" id="toolsGrid">
+
+
+            <!-- FINANCE -->
+
+            <div class="tool-card"
+                 data-category="finance"
+                 data-name="emi calculator">
+
+                <div class="tool-icon">🏦</div>
+
+                <h3>EMI Calculator</h3>
+
+                <p>
+                    Calculate monthly loan payments,
+                    total interest and total repayment.
+                </p>
+
+                <a href="#emi" class="tool-btn">
+                    Use Calculator →
+                </a>
+
+            </div>
+
+
+            <div class="tool-card"
+                 data-category="finance"
+                 data-name="loan calculator">
+
+                <div class="tool-icon">💳</div>
+
+                <h3>Loan Calculator</h3>
+
+                <p>
+                    Estimate loan payments and understand
+                    the cost of borrowing.
+                </p>
+
+                <a href="#emi" class="tool-btn">
+                    Calculate →
+                </a>
+
+            </div>
+
+
+            <div class="tool-card"
+                 data-category="finance"
+                 data-name="investment calculator">
+
+                <div class="tool-icon">📈</div>
+
+                <h3>Investment Calculator</h3>
+
+                <p>
+                    Estimate how an investment could grow
+                    over time using compound growth.
+                </p>
+
+                <a href="#investment" class="tool-btn">
+                    Use Calculator →
+                </a>
+
+            </div>
+
+
+            <div class="tool-card"
+                 data-category="finance"
+                 data-name="compound interest calculator">
+
+                <div class="tool-icon">💰</div>
+
+                <h3>Compound Interest</h3>
+
+                <p>
+                    Calculate potential growth from
+                    compound interest.
+                </p>
+
+                <a href="#investment" class="tool-btn">
+                    Calculate →
+                </a>
+
+            </div>
+
+
+            <div class="tool-card"
+                 data-category="finance"
+                 data-name="percentage calculator">
+
+                <div class="tool-icon">％</div>
+
+                <h3>Percentage Calculator</h3>
+
+                <p>
+                    Quickly calculate percentages,
+                    increases and decreases.
+                </p>
+
+                <a href="#percentage" class="tool-btn">
+                    Use Calculator →
+                </a>
+
+            </div>
+
+
+            <div class="tool-card"
+                 data-category="finance"
+                 data-name="vat calculator">
+
+                <div class="tool-icon">🧾</div>
+
+                <h3>VAT Calculator</h3>
+
+                <p>
+                    Calculate VAT-inclusive and
+                    VAT-exclusive amounts.
+                </p>
+
+                <a href="#vat" class="tool-btn">
+                    Use Calculator →
+                </a>
+
+            </div>
+
+
+            <div class="tool-card"
+                 data-category="finance"
+                 data-name="salary calculator">
+
+                <div class="tool-icon">💵</div>
+
+                <h3>Salary Calculator</h3>
+
+                <p>
+                    Estimate salary components and
+                    basic financial deductions.
+                </p>
+
+                <a href="#" class="tool-btn">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+            <!-- EDUCATION -->
+
+            <div class="tool-card"
+                 data-category="education"
+                 data-name="gpa calculator">
+
+                <div class="tool-icon">🎓</div>
+
+                <h3>GPA Calculator</h3>
+
+                <p>
+                    Calculate GPA from grades and
+                    credit hours.
+                </p>
+
+                <a href="#" class="tool-btn">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+            <div class="tool-card"
+                 data-category="education"
+                 data-name="grade calculator">
+
+                <div class="tool-icon">📚</div>
+
+                <h3>Grade Calculator</h3>
+
+                <p>
+                    Calculate grades and required scores
+                    for academic targets.
+                </p>
+
+                <a href="#" class="tool-btn">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+            <!-- DATE -->
+
+            <div class="tool-card"
+                 data-category="date"
+                 data-name="age calculator">
+
+                <div class="tool-icon">🎂</div>
+
+                <h3>Age Calculator</h3>
+
+                <p>
+                    Calculate your exact age in years,
+                    months and days.
+                </p>
+
+                <a href="#age" class="tool-btn">
+                    Use Calculator →
+                </a>
+
+            </div>
+
+
+            <div class="tool-card"
+                 data-category="date"
+                 data-name="date calculator">
+
+                <div class="tool-icon">📅</div>
+
+                <h3>Date Calculator</h3>
+
+                <p>
+                    Calculate the difference between
+                    dates and future dates.
+                </p>
+
+                <a href="#" class="tool-btn">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+            <div class="tool-card"
+                 data-category="date"
+                 data-name="time calculator">
+
+                <div class="tool-icon">⏱️</div>
+
+                <h3>Time Calculator</h3>
+
+                <p>
+                    Calculate time differences,
+                    durations and conversions.
+                </p>
+
+                <a href="#" class="tool-btn">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+            <!-- CONVERSION -->
+
+            <div class="tool-card"
+                 data-category="conversion"
+                 data-name="unit converter">
+
+                <div class="tool-icon">📏</div>
+
+                <h3>Unit Converter</h3>
+
+                <p>
+                    Convert length, weight, temperature,
+                    area and other common units.
+                </p>
+
+                <a href="#" class="tool-btn">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+            <div class="tool-card"
+                 data-category="conversion"
+                 data-name="currency converter">
+
+                <div class="tool-icon">💱</div>
+
+                <h3>Currency Converter</h3>
+
+                <p>
+                    Convert between currencies using
+                    current exchange-rate data.
+                </p>
+
+                <a href="#" class="tool-btn">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+            <!-- TEXT -->
+
+            <div class="tool-card"
+                 data-category="text"
+                 data-name="word counter">
+
+                <div class="tool-icon">📝</div>
+
+                <h3>Word Counter</h3>
+
+                <p>
+                    Count words, characters, sentences
+                    and paragraphs in your text.
+                </p>
+
+                <a href="#" class="tool-btn">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+            <div class="tool-card"
+                 data-category="text"
+                 data-name="character counter">
+
+                <div class="tool-icon">🔤</div>
+
+                <h3>Character Counter</h3>
+
+                <p>
+                    Count characters with or without
+                    spaces.
+                </p>
+
+                <a href="#" class="tool-btn">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+            <!-- IMAGE / PDF -->
+
+            <div class="tool-card"
+                 data-category="image"
+                 data-name="image compressor">
+
+                <div class="tool-icon">🖼️</div>
+
+                <h3>Image Compressor</h3>
+
+                <p>
+                    Reduce image file size while
+                    maintaining useful image quality.
+                </p>
+
+                <a href="#" class="tool-btn">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+            <div class="tool-card"
+                 data-category="image"
+                 data-name="pdf tools">
+
+                <div class="tool-icon">📄</div>
+
+                <h3>PDF Tools</h3>
+
+                <p>
+                    Access useful PDF utilities for
+                    everyday document tasks.
+                </p>
+
+                <a href="#" class="tool-btn">
+                    Coming Soon →
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="no-results" id="noResults">
+            No tools found. Try another search.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WORKING CALCULATORS
+========================= -->
+
+<section class="section calculator-section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>
+                Popular Calculators
+            </h2>
+
+            <p>
+                Try some of our calculators directly on this page.
+            </p>
+
+        </div>
+
+
+        <div class="calculator-grid">
+
+
+            <!-- EMI -->
+
+            <div class="calculator" id="emi">
+
+                <h3>
+                    EMI Calculator
+                </h3>
+
+                <p class="calculator-description">
+                    Calculate your estimated monthly loan payment.
+                </p>
+
+                <div class="input-group">
+
+                    <label for="loanAmount">
+                        Loan Amount
+                    </label>
+
+                    <input
+                        type="number"
+                        id="loanAmount"
+                        placeholder="e.g. 500000"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="interestRate">
+                        Annual Interest Rate (%)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="interestRate"
+                        placeholder="e.g. 10"
+                        step="0.01"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="loanYears">
+                        Loan Period (Years)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="loanYears"
+                        placeholder="e.g. 5"
+                    >
+
+                </div>
+
+
+                <button class="calculate-btn"
+                        onclick="calculateEMI()">
+                    Calculate EMI
+                </button>
+
+
+                <div class="result" id="emiResult">
+
+                    <strong id="emiAmount">
+                        —
+                    </strong>
+
+                    <p id="emiDetails">
+                        Monthly EMI
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- INVESTMENT -->
+
+            <div class="calculator" id="investment">
+
+                <h3>
+                    Investment Calculator
+                </h3>
+
+                <p class="calculator-description">
+                    Estimate compound growth of a one-time investment.
+                </p>
+
+                <div class="input-group">
+
+                    <label for="principal">
+                        Initial Investment
+                    </label>
+
+                    <input
+                        type="number"
+                        id="principal"
+                        placeholder="e.g. 100000"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="investmentRate">
+                        Expected Annual Return (%)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="investmentRate"
+                        placeholder="e.g. 12"
+                        step="0.01"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="investmentYears">
+                        Investment Period (Years)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="investmentYears"
+                        placeholder="e.g. 10"
+                    >
+
+                </div>
+
+
+                <button class="calculate-btn"
+                        onclick="calculateInvestment()">
+                    Calculate Growth
+                </button>
+
+
+                <div class="result" id="investmentResult">
+
+                    <strong id="futureValue">
+                        —
+                    </strong>
+
+                    <p id="investmentDetails">
+                        Estimated future value
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PERCENTAGE -->
+
+            <div class="calculator" id="percentage">
+
+                <h3>
+                    Percentage Calculator
+                </h3>
+
+                <p class="calculator-description">
+                    Find what percentage one number is of another.
+                </p>
+
+                <div class="input-group">
+
+                    <label for="percentagePart">
+                        Part / Value
+                    </label>
+
+                    <input
+                        type="number"
+                        id="percentagePart"
+                        placeholder="e.g. 25"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="percentageTotal">
+                        Total
+                    </label>
+
+                    <input
+                        type="number"
+                        id="percentageTotal"
+                        placeholder="e.g. 100"
+                    >
+
+                </div>
+
+
+                <button class="calculate-btn"
+                        onclick="calculatePercentage()">
+                    Calculate Percentage
+                </button>
+
+
+                <div class="result" id="percentageResult">
+
+                    <strong id="percentageValue">
+                        —
+                    </strong>
+
+                    <p>
+                        Percentage
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- VAT -->
+
+            <div class="calculator" id="vat">
+
+                <h3>
+                    VAT Calculator
+                </h3>
+
+                <p class="calculator-description">
+                    Calculate VAT and the total amount.
+                </p>
+
+                <div class="input-group">
+
+                    <label for="vatAmount">
+                        Amount Before VAT
+                    </label>
+
+                    <input
+                        type="number"
+                        id="vatAmount"
+                        placeholder="e.g. 10000"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="vatRate">
+                        VAT Rate (%)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="vatRate"
+                        value="13"
+                        step="0.01"
+                    >
+
+                </div>
+
+
+                <button class="calculate-btn"
+                        onclick="calculateVAT()">
+                    Calculate VAT
+                </button>
+
+
+                <div class="result" id="vatResult">
+
+                    <strong id="vatTotal">
+                        —
+                    </strong>
+
+                    <p id="vatDetails">
+                        Total including VAT
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- AGE -->
+
+            <div class="calculator" id="age">
+
+                <h3>
+                    Age Calculator
+                </h3>
+
+                <p class="calculator-description">
+                    Calculate your age from your date of birth.
+                </p>
+
+                <div class="input-group">
+
+                    <label for="birthDate">
+                        Date of Birth
+                    </label>
+
+                    <input
+                        type="date"
+                        id="birthDate"
+                    >
+
+                </div>
+
+
+                <button class="calculate-btn"
+                        onclick="calculateAge()">
+                    Calculate Age
+                </button>
+
+
+                <div class="result" id="ageResult">
+
+                    <strong id="ageValue">
+                        —
+                    </strong>
+
+                    <p>
+                        Your calculated age
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     POPULAR TOOLS
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h2>
+                Useful Everyday Tools
+            </h2>
+
+            <p>
+                More tools can be added to make this section a
+                complete online utility platform.
+            </p>
+
+        </div>
+
+
+        <div class="popular-list">
+
+            <div class="popular-item">
+                <div class="emoji">🎂</div>
+                <h3>Age Calculator</h3>
+                <p>Find exact age from birth date.</p>
+            </div>
+
+
+            <div class="popular-item">
+                <div class="emoji">📊</div>
+                <h3>Percentage</h3>
+                <p>Calculate percentages quickly.</p>
+            </div>
+
+
+            <div class="popular-item">
+                <div class="emoji">🎓</div>
+                <h3>GPA Calculator</h3>
+                <p>Calculate academic GPA.</p>
+            </div>
+
+
+            <div class="popular-item">
+                <div class="emoji">📏</div>
+                <h3>Unit Converter</h3>
+                <p>Convert common measurement units.</p>
+            </div>
+
+
+            <div class="popular-item">
+                <div class="emoji">📝</div>
+                <h3>Word Counter</h3>
+                <p>Count words and characters.</p>
+            </div>
+
+
+            <div class="popular-item">
+                <div class="emoji">💳</div>
+                <h3>Loan Calculator</h3>
+                <p>Estimate loan repayment.</p>
+            </div>
+
+
+            <div class="popular-item">
+                <div class="emoji">📅</div>
+                <h3>Date Calculator</h3>
+                <p>Calculate dates and durations.</p>
+            </div>
+
+
+            <div class="popular-item">
+                <div class="emoji">🖼️</div>
+                <h3>Image Compressor</h3>
+                <p>Reduce image file sizes.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="cta">
+
+            <h2>
+                More Tools Are Coming
+            </h2>
+
+            <p>
+                The goal is to build a large collection of fast,
+                simple and useful online tools covering finance,
+                education, productivity, conversions, documents
+                and everyday calculations.
+            </p>
+
+            <a href="/finance/">
+                Explore Finance →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <h3>
+                    GovindaRegmi.com.np
+                </h3>
+
+                <p>
+                    A developing Nepal-focused platform covering
+                    employment, investment information, finance,
+                    useful tools and financial education.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Jobs</h4>
+
+                <a href="/jobs/">All Jobs</a>
+                <a href="/jobs/">Nepal Jobs</a>
+                <a href="/jobs/">Foreign Jobs</a>
+                <a href="/jobs/">Government Jobs</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Finance</h4>
+
+                <a href="/finance/">Investment Opportunities</a>
+                <a href="/finance/">Stock Market</a>
+                <a href="/finance/">IPO & FPO</a>
+                <a href="/finance/">Mutual Funds</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Resources</h4>
+
+                <a href="/tools/">Tools</a>
+                <a href="/blog/">Blog</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © <span id="year"></span> GovindaRegmi.com.np.
+            All rights reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    function toggleMenu() {
+
+        const nav = document.getElementById("navLinks");
+
+        nav.classList.toggle("show");
+
+    }
+
+
+    /* =========================
+       TOOL SEARCH
+    ========================= */
+
+    function searchTools() {
+
+        const search =
+            document.getElementById("toolSearch")
+            .value
+            .toLowerCase()
+            .trim();
+
+        const cards =
+            document.querySelectorAll(".tool-card");
+
+        let visible = 0;
+
+        cards.forEach(card => {
+
+            const name =
+                card.dataset.name.toLowerCase();
+
+            if (name.includes(search)) {
+
+                card.style.display = "flex";
+                visible++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+        document.getElementById("noResults").style.display =
+            visible === 0 ? "block" : "none";
+
+    }
+
+
+    /* =========================
+       CATEGORY FILTER
+    ========================= */
+
+    function filterTools(category, button) {
+
+        document
+            .querySelectorAll(".category-btn")
+            .forEach(btn => {
+
+                btn.classList.remove("active");
+
+            });
+
+        button.classList.add("active");
+
+        document.getElementById("toolSearch").value = "";
+
+        const cards =
+            document.querySelectorAll(".tool-card");
+
+        let visible = 0;
+
+        cards.forEach(card => {
+
+            if (
+                category === "all" ||
+                card.dataset.category === category
+            ) {
+
+                card.style.display = "flex";
+                visible++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+        document.getElementById("noResults").style.display =
+            visible === 0 ? "block" : "none";
+
+    }
+
+
+    /* =========================
+       EMI CALCULATOR
+    ========================= */
+
+    function calculateEMI() {
+
+        const principal =
+            parseFloat(
+                document.getElementById("loanAmount").value
+            );
+
+        const annualRate =
+            parseFloat(
+                document.getElementById("interestRate").value
+            );
+
+        const years =
+            parseFloat(
+                document.getElementById("loanYears").value
+            );
+
+        if (
+            isNaN(principal) ||
+            isNaN(annualRate) ||
+            isNaN(years) ||
+            principal <= 0 ||
+            annualRate < 0 ||
+            years <= 0
+        ) {
+
+            alert("Please enter valid loan details.");
+            return;
+
+        }
+
+        const months = years * 12;
+
+        const monthlyRate =
+            annualRate / 100 / 12;
+
+        let emi;
+
+        if (monthlyRate === 0) {
+
+            emi = principal / months;
+
+        } else {
+
+            emi =
+                principal *
+                monthlyRate *
+                Math.pow(
+                    1 + monthlyRate,
+                    months
+                ) /
+                (
+                    Math.pow(
+                        1 + monthlyRate,
+                        months
+                    ) - 1
+                );
+
+        }
+
+        const totalPayment =
+            emi * months;
+
+        const totalInterest =
+            totalPayment - principal;
+
+        document.getElementById("emiAmount").textContent =
+            formatMoney(emi) + " / month";
+
+        document.getElementById("emiDetails").textContent =
+            "Total payment: " +
+            formatMoney(totalPayment) +
+            " | Total interest: " +
+            formatMoney(totalInterest);
+
+        document.getElementById("emiResult").style.display =
+            "block";
+
+    }
+
+
+    /* =========================
+       INVESTMENT CALCULATOR
+    ========================= */
+
+    function calculateInvestment() {
+
+        const principal =
+            parseFloat(
+                document.getElementById("principal").value
+            );
+
+        const rate =
+            parseFloat(
+                document.getElementById("investmentRate").value
+            );
+
+        const years =
+            parseFloat(
+                document.getElementById("investmentYears").value
+            );
+
+        if (
+            isNaN(principal) ||
+            isNaN(rate) ||
+            isNaN(years) ||
+            principal <= 0 ||
+            years <= 0
+        ) {
+
+            alert("Please enter valid investment details.");
+            return;
+
+        }
+
+        const future =
+            principal *
+            Math.pow(
+                1 + rate / 100,
+                years
+            );
+
+        const gain =
+            future - principal;
+
+        document.getElementById("futureValue").textContent =
+            formatMoney(future);
+
+        document.getElementById("investmentDetails").textContent =
+            "Estimated gain: " +
+            formatMoney(gain);
+
+        document.getElementById("investmentResult").style.display =
+            "block";
+
+    }
+
+
+    /* =========================
+       PERCENTAGE CALCULATOR
+    ========================= */
+
+    function calculatePercentage() {
+
+        const part =
+            parseFloat(
+                document.getElementById("percentagePart").value
+            );
+
+        const total =
+            parseFloat(
+                document.getElementById("percentageTotal").value
+            );
+
+        if (
+            isNaN(part) ||
+            isNaN(total) ||
+            total === 0
+        ) {
+
+            alert("Please enter valid numbers.");
+            return;
+
+        }
+
+        const percentage =
+            (part / total) * 100;
+
+        document.getElementById("percentageValue").textContent =
+            percentage.toFixed(2) + "%";
+
+        document.getElementById("percentageResult").style.display =
+            "block";
+
+    }
+
+
+    /* =========================
+       VAT CALCULATOR
+    ========================= */
+
+    function calculateVAT() {
+
+        const amount =
+            parseFloat(
+                document.getElementById("vatAmount").value
+            );
+
+        const rate =
+            parseFloat(
+                document.getElementById("vatRate").value
+            );
+
+        if (
+            isNaN(amount) ||
+            isNaN(rate) ||
+            amount < 0 ||
+            rate < 0
+        ) {
+
+            alert("Please enter valid VAT details.");
+            return;
+
+        }
+
+        const vat =
+            amount * rate / 100;
+
+        const total =
+            amount + vat;
+
+        document.getElementById("vatTotal").textContent =
+            formatMoney(total);
+
+        document.getElementById("vatDetails").textContent =
+            "VAT: " +
+            formatMoney(vat) +
+            " | Before VAT: " +
+            formatMoney(amount);
+
+        document.getElementById("vatResult").style.display =
+            "block";
+
+    }
+
+
+    /* =========================
+       AGE CALCULATOR
+    ========================= */
+
+    function calculateAge() {
+
+        const birthValue =
+            document.getElementById("birthDate").value;
+
+        if (!birthValue) {
+
+            alert("Please select your date of birth.");
+            return;
+
+        }
+
+        const birthDate =
+            new Date(
+                birthValue + "T00:00:00"
+            );
+
+        const today =
+            new Date();
+
+        if (birthDate > today) {
+
+            alert("Date of birth cannot be in the future.");
+            return;
+
+        }
+
+        let years =
+            today.getFullYear() -
+            birthDate.getFullYear();
+
+        let months =
+            today.getMonth() -
+            birthDate.getMonth();
+
+        let days =
+            today.getDate() -
+            birthDate.getDate();
+
+        if (days < 0) {
+
+            months--;
+
+            const previousMonth =
+                new Date(
+                    today.getFullYear(),
+                    today.getMonth(),
+                    0
+                );
+
+            days +=
+                previousMonth.getDate();
+
+        }
+
+        if (months < 0) {
+
+            years--;
+            months += 12;
+
+        }
+
+        document.getElementById("ageValue").textContent =
+            years + " years, " +
+            months + " months, " +
+            days + " days";
+
+        document.getElementById("ageResult").style.display =
+            "block";
+
+    }
+
+
+    /* =========================
+       MONEY FORMAT
+    ========================= */
+
+    function formatMoney(number) {
+
+        return new Intl.NumberFormat(
+            "en-IN",
+            {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            }
+        ).format(number);
+
+    }
+
+
+    /* =========================
+       FOOTER YEAR
+    ========================= */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
+```
